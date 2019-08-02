@@ -15,7 +15,7 @@ class Formulario extends React.Component {
   render() {
     return (
       <div>
-        <form id="formatear-formulario" onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit}>
           <div className="form-group">
             <label>Nombre</label>
             <input

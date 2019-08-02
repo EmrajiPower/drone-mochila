@@ -5,7 +5,7 @@ class Cabecera extends React.Component {
     return (
       <div>
         <header>
-          <div className="container">
+          <div className="container" id="cabecera">
             <div className="row">
               <div className="col-6">
                 <h2>Drone Mochila</h2>
