@@ -1,7 +1,6 @@
 import React from "react";
 import Cabecera from "./cabecera";
 import Lista from "./lista";
-import logo from "../imagenes/drone.svg";
 import { Link } from "react-router-dom";
 
 class Principal extends React.Component {
@@ -28,17 +27,9 @@ class Principal extends React.Component {
     return (
       <React.Fragment>
         <Cabecera />
-        <div className="pancarta">
-          <div className="pancarta-encabezado">
-            <div className="pancarta-container">
-              <img className="pancarta-img" src={logo} alt="logo" />
-            </div>
-          </div>
-        </div>
-
         <div className="pancarta-container">
           <div className="pancarta-boton">
-            <Link to="/principal/agregar" className="btn btn-outline-success">
+            <Link to="/agregar" className="btn btn-outline-success">
               Agregar
             </Link>
           </div>

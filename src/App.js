@@ -7,8 +7,8 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/principal" component={Principal} />
-        <Route exact path="/principal/agregar" component={Agregar} />
+        <Route exact path="/" component={Principal} />
+        <Route exact path="/agregar" component={Agregar} />
       </Switch>
     </BrowserRouter>
   );
