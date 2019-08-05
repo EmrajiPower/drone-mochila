@@ -1,4 +1,5 @@
 import React from "react";
+import firebase from "./firebase";
 
 class Formulario extends React.Component {
   // handleChange = e => {
@@ -10,6 +11,18 @@ class Formulario extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    const itemsRef = firebase.database().ref("Personas");
+    const item = {
+      nombre: this.props.formvalues.nombre,
+      apellido: this.props.formvalues.apellido,
+      correo: this.props.formvalues.correo,
+      trabajo: this.props.formvalues.trabajo
+    };
+    itemsRef.push(item);
+    this.setState({
+      nombre: "",
+      trabajo: ""
+    });
   };
 
   render() {
@@ -49,7 +62,12 @@ class Formulario extends React.Component {
               // Para tener un estado controlado este prop, una sola fuente de Información
               values={this.props.formvalues.trabajo}
             />
-            <button className="btn btn-outline-success">Enviar</button>
+            <button
+              onChange={this.handleChange}
+              className="btn btn-outline-success"
+            >
+              Enviar
+            </button>
           </div>
         </form>
       </div>
