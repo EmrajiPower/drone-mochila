@@ -10471,11 +10471,31 @@ a.text-dark:focus {
   padding: 0 1rem;
 }
 
+@keyframes changewidth {
+  from {
+    width: 100px;
+  }
+  20% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: translate(22px, 44px);
+  }
+  to {
+    width: 300px;
+    transform: rotate(-20deg);
+  }
+}
+
 .pancarta-img {
   margin-bottom: 2rem;
   width: 70px;
   height: 70px;
-  margin-left: 45%;
+  margin-left: 35%;
+  animation-duration: 3s;
+  animation-name: changewidth;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 .lista-personas li {
