@@ -21,6 +21,8 @@ class Formulario extends React.Component {
     itemsRef.push(item);
     this.setState({
       nombre: "",
+      apellido: "",
+      correo: "",
       trabajo: ""
     });
   };

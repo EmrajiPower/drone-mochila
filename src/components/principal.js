@@ -5,16 +5,41 @@ import firebase from "./firebase";
 import { Link } from "react-router-dom";
 
 class Principal extends React.Component {
+  _isMounted = false;
+
   constructor(props) {
     super(props);
     this.state = {
       personas: [
-        {
-          nombre: "[Un nombre]",
-          trabajo: "[Un trabajo]"
-        }
+        // {
+        //   nombre: "[Un nombre]",
+        //   trabajo: "[Un trabajo]"
+        // }
       ]
     };
+  }
+
+  componentDidMount() {
+    this._isMounted = true;
+    const personaRef = firebase.database().ref("Personas");
+    personaRef.on("value", actualizar => {
+      let personas = actualizar.val();
+      let newState = [];
+      for (let persona in personas) {
+        newState.push({
+          id: persona,
+          nombre: personas[persona].nombre,
+          trabajo: personas[persona].trabajo
+        });
+      }
+      this.setState({
+        personas: newState
+      });
+    });
+  }
+
+  componentWillUnmount() {
+    this._isMounted = false;
   }
 
   // componentDidMount() {

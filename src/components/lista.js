@@ -7,7 +7,7 @@ class Lista extends React.Component {
         <ul className="list-unstyled">
           {this.props.lista.map(p => {
             return (
-              <li key={p.correo}>
+              <li key={p.id}>
                 {p.nombre}
                 <br />
                 {p.trabajo}
