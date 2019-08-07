@@ -25,6 +25,7 @@ class Formulario extends React.Component {
       correo: "",
       trabajo: ""
     });
+    alert("Información guardada!");
   };
 
   render() {
