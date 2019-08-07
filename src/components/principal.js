@@ -2,13 +2,13 @@ import React from "react";
 import Cabecera from "./cabecera";
 import Lista from "./lista";
 import firebase from "./firebase";
+import Pie from "./pie";
 import { Link } from "react-router-dom";
 
 class Principal extends React.Component {
-  _isMounted = false;
-
   constructor(props) {
     super(props);
+    this._isMounted = false;
     this.state = {
       personas: []
     };
@@ -52,6 +52,7 @@ class Principal extends React.Component {
             <Lista lista={this.state.personas} />
           </div>
         </div>
+        <Pie />
       </React.Fragment>
     );
   }
