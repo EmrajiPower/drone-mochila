@@ -3,6 +3,7 @@ import Formulario from "./formulario";
 import Cabecera from "./cabecera";
 import Resultado from "./resultado";
 import firebase from "./firebase";
+import Pie from "./pie";
 import { Link } from "react-router-dom";
 
 class Agregar extends React.Component {
@@ -51,6 +52,7 @@ class Agregar extends React.Component {
             </div>
           </div>
         </div>
+        <Pie />
       </div>
     );
   }

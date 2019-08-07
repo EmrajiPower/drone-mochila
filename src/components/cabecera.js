@@ -28,7 +28,9 @@ class Cabecera extends React.Component {
               </div>
               <div className="subtitulo">
                 <div className="col-4">
-                  <h3>Bienvenido {this.props.nombre} al foro!</h3>
+                  <h3>
+                    Bienvenido <strong>{this.props.nombre}</strong> al foro!
+                  </h3>
                 </div>
               </div>
             </div>

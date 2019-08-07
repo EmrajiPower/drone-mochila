@@ -19,6 +19,11 @@
   max-width: 100%;
 }
 
+html {
+  zoom: 100%;
+  -moz-transform: scale(1);
+}
+
 #root {
   background-color: #f9f3ec;
 }
@@ -4564,22 +4569,19 @@ input[type="button"].btn-block {
   }
   div.panel-A {
     width: 170px;
-    margin: -40%;
+    margin: -22%;
     margin-bottom: 20px;
     margin-top: -5px;
   }
   .subtitulo h3 {
     margin-left: -200%;
   }
-  .lista-personas {
-  }
-  div.lista-firebase {
-    margin: 1% 1% !important;
-    margin-bottom: 10px;
-    padding-bottom: 1%;
+  div.lista-personas {
+    margin: 0 14% !important;
+    padding: 0 1% !important;
   }
   .list-unstyled {
-    padding-bottom: 15%;
+    padding-bottom: 5%;
   }
 }
 
@@ -4602,6 +4604,15 @@ input[type="button"].btn-block {
     padding-top: 5%;
     text-align: center;
     font-size: 1.4rem;
+  }
+  .subtitulo h3 {
+    margin-left: 2%;
+  }
+  .lista-firebase li {
+    margin: 5% -66%;
+  }
+  .footer {
+    padding-bottom: 3%;
   }
 }
 
@@ -4645,6 +4656,18 @@ input[type="button"].btn-block {
     padding-right: 0;
     padding-left: 0;
   }
+  .subtitulo h3 {
+    margin-left: -170%;
+  }
+  div.lista-personas {
+    margin: 0 29%;
+    padding: 0 1%;
+  }
+  .lista-firebase li {
+    margin: 5% -125%;
+    margin-bottom: 10px;
+    padding-bottom: 1%;
+  }
 }
 
 @media (min-width: 768px) {
@@ -4686,6 +4709,12 @@ input[type="button"].btn-block {
   .navbar-expand-lg > .container-fluid {
     padding-right: 0;
     padding-left: 0;
+  }
+  .pancarta-fondoB {
+    display: none;
+  }
+  .pancarta-fondoC {
+    display: none;
   }
 }
 
@@ -10589,11 +10618,19 @@ a.text-dark:focus {
   margin-top: 12%;
 }
 
+.lista-personas {
+  border: 2px solid #d8eced;
+  background-color: inherit;
+  margin: 0 20%;
+  overflow: scroll;
+  height: 200px;
+}
+
 .lista-personas li {
   margin: 1px solid black;
-  border: 2px solid black;
+  border: 1px solid black;
   border-radius: 10px 100px / 120px;
-  padding-left: 2%;
+  padding-left: 3%;
   margin-bottom: 1rem;
 }
 
@@ -10617,4 +10654,17 @@ a.text-dark:focus {
   padding: 10px;
   overflow: scroll;
   height: 174px;
+}
+
+strong {
+  color: #4daaec;
+}
+
+.footer {
+  text-align: center;
+}
+
+.footer p {
+  font-size: 16px;
+  padding: 1% 0;
 }

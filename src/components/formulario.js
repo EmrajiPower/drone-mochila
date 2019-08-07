@@ -39,6 +39,7 @@ class Formulario extends React.Component {
               name="nombre"
               // Para tener un estado controlado este prop, una sola fuente de Información
               values={this.props.formvalues.nombre}
+              required
             />
             <label>Apellido</label>
             <input
@@ -47,6 +48,7 @@ class Formulario extends React.Component {
               name="apellido"
               // Para tener un estado controlado este prop, una sola fuente de Información
               values={this.props.formvalues.apellido}
+              required
             />
             <label>Correo</label>
             <input
@@ -55,6 +57,7 @@ class Formulario extends React.Component {
               name="correo"
               // Para tener un estado controlado este prop, una sola fuente de Información
               values={this.props.formvalues.correo}
+              required
             />
             <label>Trabajo</label>
             <input
@@ -63,6 +66,7 @@ class Formulario extends React.Component {
               name="trabajo"
               // Para tener un estado controlado este prop, una sola fuente de Información
               values={this.props.formvalues.trabajo}
+              required
             />
             <button
               onChange={this.handleChange}
