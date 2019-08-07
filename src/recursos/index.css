@@ -17,7 +17,10 @@
     gris suave: #808b97
     */
   max-width: 100%;
-  background-color: #fff1c1;
+}
+
+#root {
+  background-color: #f9f3ec;
 }
 
 header {
@@ -25,6 +28,7 @@ header {
 }
 
 body {
+  overflow-x: hidden;
   background-color: #ffffff;
 }
 :root {
@@ -4546,6 +4550,37 @@ input[type="button"].btn-block {
   content: "";
   background: no-repeat center center;
   background-size: 100% 100%;
+}
+@media (max-width: 400px) {
+  div#root {
+    margin-bottom: 1%;
+  }
+  .form-group {
+    font-size: 0.9em;
+    margin-left: -80%;
+  }
+  .btn {
+    font-size: 0.9em;
+  }
+  div.panel-A {
+    width: 170px;
+    margin: -40%;
+    margin-bottom: 20px;
+    margin-top: -5px;
+  }
+  .subtitulo h3 {
+    margin-left: -200%;
+  }
+  .lista-personas {
+  }
+  div.lista-firebase {
+    margin: 1% 1% !important;
+    margin-bottom: 10px;
+    padding-bottom: 1%;
+  }
+  .list-unstyled {
+    padding-bottom: 15%;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -10454,26 +10489,33 @@ a.text-dark:focus {
   }
 }
 
-.pancarta {
-}
-
 .pancarta-encabezado {
   width: 100%;
   padding: 2rem 0;
-  background-color: #1b1b25;
-  background-repeat: repeat;
   margin-bottom: 1rem;
+  background-color: rgb(216, 236, 237);
 }
 
 .pancarta-container {
-  width: 100%;
-  max-width: 580px;
+  max-width: 30%;
+  align-items: center;
+  justify-content: center;
   padding: 0 1rem;
 }
 
-@keyframes changewidth {
+.subtitulo {
+  max-height: 100%;
+  margin-left: 60%;
+  margin-right: -80%;
+}
+
+.subtitulo h3 {
+  justify-content: center;
+}
+
+@keyframes animacion-drone {
   from {
-    width: 100px;
+    transform: translate(22px, 44px);
   }
   20% {
     transform: rotate(10deg);
@@ -10487,15 +10529,64 @@ a.text-dark:focus {
   }
 }
 
+@keyframes animacion-nube {
+  from {
+    transform: rotate(-1deg);
+  }
+  to {
+    transform: rotate(1deg);
+  }
+}
+
 .pancarta-img {
+  z-index: 2;
   margin-bottom: 2rem;
   width: 70px;
   height: 70px;
+  margin-top: -30%;
   margin-left: 35%;
   animation-duration: 3s;
-  animation-name: changewidth;
+  animation-name: animacion-drone;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+}
+
+.pancarta-fondoA {
+  z-index: 1;
+  animation-duration: 1s;
+  animation-name: animacion-nube;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  height: 120px;
+  width: 350px;
+}
+
+.pancarta-fondoB {
+  z-index: 1;
+  animation-duration: 2s;
+  animation-name: animacion-nube;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  height: 120px;
+  width: 350px;
+  padding-left: 15%;
+  position: absolute;
+  top: 0;
+  margin-top: 4%;
+}
+
+.pancarta-fondoC {
+  z-index: 1;
+  animation-duration: 4s;
+  animation-name: animacion-nube;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  height: 120px;
+  width: 350px;
+  padding-left: 10%;
+  position: absolute;
+  top: 0;
+  margin-top: 12%;
 }
 
 .lista-personas li {
@@ -10506,8 +10597,24 @@ a.text-dark:focus {
   margin-bottom: 1rem;
 }
 
+.lista-firebase {
+  margin: 1% 30%;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
 .pancarta-boton {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   margin-bottom: 1rem;
+}
+
+.panel-A {
+  border: 2px solid white;
+  background-color: white;
+  margin: 3% 6%;
+  padding: 10px;
+  overflow: scroll;
+  height: 174px;
 }

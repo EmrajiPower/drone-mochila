@@ -10,12 +10,7 @@ class Principal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      personas: [
-        // {
-        //   nombre: "[Un nombre]",
-        //   trabajo: "[Un trabajo]"
-        // }
-      ]
+      personas: []
     };
   }
 
@@ -42,51 +37,18 @@ class Principal extends React.Component {
     this._isMounted = false;
   }
 
-  // componentDidMount() {
-  //
-  //   this.getUserData();
-  // }
-  //
-  // componentDidUpdate(prevProps, prevState) {
-  //   if (prevState !== this.state) {
-  //     this.writeUserData();
-  //   }
-  // }
-  //
-  // componentWillUnmount() {
-  //
-  // }
-  //
-  // writeUserData = () => {
-  //   firebase
-  //     .database()
-  //     .ref("Personas")
-  //     .set(this.state);
-  //   console.log("Información Guardada!");
-  // };
-  //
-  // getUserData = () => {
-  //   let ref = firebase.database().ref("Personas");
-  //   ref.on("value", snapshot => {
-  //     const state = snapshot.val();
-  //     this.setState(state);
-  //   });
-  // };
-
   render() {
     return (
       <React.Fragment>
         <Cabecera />
-        <div className="pancarta-container">
-          <div className="pancarta-boton">
-            <Link to="/agregar" className="btn btn-outline-success">
-              Agregar
-            </Link>
-          </div>
+        <div className="pancarta-boton">
+          <Link to="/agregar" className="btn btn-outline-success">
+            Agrega a Alguien!
+          </Link>
         </div>
 
         <div className="lista-personas">
-          <div className="pancarta-container">
+          <div className="lista-firebase">
             <Lista lista={this.state.personas} />
           </div>
         </div>

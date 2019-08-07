@@ -30,12 +30,10 @@ class Agregar extends React.Component {
     return (
       <div>
         <Cabecera nombre={this.state.form.nombre} />
-        <div className="pancarta-container">
-          <div className="pancarta-boton">
-            <Link to="/" className="btn btn-outline-success">
-              Ver Lista
-            </Link>
-          </div>
+        <div className="pancarta-boton">
+          <Link to="/" className="btn btn-outline-success">
+            Ver Lista
+          </Link>
         </div>
         <div className="container">
           <div className="row justify-content-center">

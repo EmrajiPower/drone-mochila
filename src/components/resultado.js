@@ -4,9 +4,11 @@ class Resultado extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <h3>Mi info 📋</h3>
-        <p>{this.props.nombre}</p>
-        <p>{this.props.trabajo}</p>
+        <div className="panel-A">
+          <h3>Mis datos 📋</h3>
+          <p>{this.props.nombre}</p>
+          <p>{this.props.trabajo}</p>
+        </div>
       </React.Fragment>
     );
   }

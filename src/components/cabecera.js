@@ -1,5 +1,8 @@
 import React from "react";
 import logo from "../imagenes/drone.svg";
+import fondoA from "../imagenes/nube.svg";
+import fondoB from "../imagenes/nube2.svg";
+import fondoC from "../imagenes/nube3.svg";
 
 class Cabecera extends React.Component {
   render() {
@@ -9,17 +12,24 @@ class Cabecera extends React.Component {
           <div className="container" id="cabecera">
             <div className="row">
               <div className="col-6">
-                <h2>Drone Mochila</h2>
-              </div>
-              <div className="col-4">
-                <p>Bienvenido {this.props.nombre} al foro!</p>
+                <h1>Drone Mochila</h1>
               </div>
             </div>
           </div>
           <div className="pancarta">
             <div className="pancarta-encabezado">
-              <div className="pancarta-container">
-                <img className="pancarta-img" src={logo} alt="logo" />
+              <div className="pancarta-fondo">
+                <img className="pancarta-fondoA" src={fondoA} alt="fondo" />
+                <img className="pancarta-fondoB" src={fondoB} alt="fondo" />
+                <img className="pancarta-fondoC" src={fondoC} alt="fondo" />
+                <div className="pancarta-container">
+                  <img className="pancarta-img" src={logo} alt="logo" />
+                </div>
+              </div>
+              <div className="subtitulo">
+                <div className="col-4">
+                  <h3>Bienvenido {this.props.nombre} al foro!</h3>
+                </div>
               </div>
             </div>
           </div>
